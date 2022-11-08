@@ -1,4 +1,4 @@
-# MeuTube: Dev Soutinho 
+# MeuTube: Eduardo Botelho
 
 [![IMERSÃO REACT AULA 01: A WEB, OS COMPONENTES E O DEPLOY!]
 [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/afonsopacifer/open-source-boilerplate/blob/master/LICENSE.md)
