@@ -1,16 +1,18 @@
 # MeuTube: Eduardo Botelho
 
-[![IMERSÃO REACT AULA 01: A WEB, OS COMPONENTES E O DEPLOY!]
+
 [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/afonsopacifer/open-source-boilerplate/blob/master/LICENSE.md)
 
 - [Switch to 🇺🇸](./_docs/README_en-us.md)?
 
 > Projeto pessoal para aprender a utlizar React!
 > 
+> IMERSÃO REACT AULA 01: A WEB, OS COMPONENTES E O DEPLOY
+> 
 > Quer ver como ta ficando? Acessa a [**DEMO**](https://meutube.vercel.app/)
 
 <p align="center">
-  <img alt="Logo do projeto" src="./_docs/logo.png" />
+  <img alt="Logo do projeto" src="./_docs/logo-meutube.png" />
 </p>
 
 ## Versioning/Versionamento
