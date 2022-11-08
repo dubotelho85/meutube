@@ -1,8 +1,9 @@
 import config from "../config.json"
 import styled from "styled-components";
-import {CSSReset} from "../src/components/CSSReset"
+import { CSSReset } from "../src/components/CSSReset"
 import Menu from "../src/components/Menu"
-import {StyledTimeline} from "../src/components/Timeline"
+import { StyledTimeline } from "../src/components/Timeline"
+import { StyledBanner } from "../src/components/Banner"
 
 function HomePage() {
   const estilosDaHomePage = {
@@ -14,8 +15,10 @@ function HomePage() {
       <CSSReset />
       <div style={estilosDaHomePage} >
         <Menu />
+        <Banner />
         <Header />
         <Timeline playlists={config.playlists} />
+        <Favorites favorites={config.favorites} />
       </div>
     </>
 
@@ -40,11 +43,6 @@ const StyledHeader = styled.div`
   }
 `;
 function Header() {
-  const mensagem = "Header"
-  const estilosDaHomePage = {
-    backgroundColor: "blue"
-  };
-
   return (
     <StyledHeader>
       {/* <img src="banner"></img> */}
@@ -60,6 +58,12 @@ function Header() {
         </div>
       </section>
     </StyledHeader>
+  );
+}
+
+function Banner() {
+  return (
+    <StyledBanner></StyledBanner>
   );
 }
 
@@ -90,5 +94,61 @@ function Timeline(props) {
         );
       })}
     </StyledTimeline>
+  );
+}
+
+const StyledFavorites = styled.div`
+  padding: 16px;
+  .favorite-header {
+    font-size: 16px;
+    padding: 16px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .favorite-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .favorite-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+
+  }
+  p{
+    font-weight: 400;
+    font-size: 14px;
+  }
+`;
+function Favorites(props) {
+  const favorites = props.favorites;
+  return (
+    <StyledFavorites>
+      <p className="favorite-header">MeuTube Favoritos</p>
+      <div className="favorite-cards">
+          {
+        favorites["cards"].map((card) => {
+          return (
+            <section className="favorite-card">
+              <img src={`https://github.com/${card.src}.png`}></img>
+              <p>
+                @{card.tag}
+              </p>
+            </section>
+          )
+        })
+      }    
+      </div>
+
+    </StyledFavorites>
   );
 }
