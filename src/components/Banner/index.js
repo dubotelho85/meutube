@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import config from "../../config.json";
+import config from "../../../config.json";
 
 export const StyledBanner = styled.div`
   margin-top: 56px;
@@ -10,5 +10,10 @@ export const StyledBanner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
 `;
+
+export default function Banner() {
+  return (
+    <StyledBanner bg={config.banner}></StyledBanner>
+  );
+}
