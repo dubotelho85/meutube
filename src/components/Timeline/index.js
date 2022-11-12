@@ -59,7 +59,7 @@ export default function Timeline({ seachValue, ...props }) {
             <div>{
               videos.filter((video) => {
                 const titleNormalized = video.title.toLowerCase();
-                const seachValueNormalized = seachValue.toLowerCase();
+                const seachValueNormalized = seachValue ? seachValue.toLowerCase() : "";
                 return titleNormalized.includes(seachValueNormalized);
               }).map((video, vIndex) => {
                 return (
